@@ -13,6 +13,9 @@
 		195E741328D4BB50003BAE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195E741128D4BB50003BAE1C /* Main.storyboard */; };
 		195E741528D4BB54003BAE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195E741428D4BB54003BAE1C /* Assets.xcassets */; };
 		195E741828D4BB54003BAE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195E741628D4BB54003BAE1C /* LaunchScreen.storyboard */; };
+		195E742128D4BD18003BAE1C /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742028D4BD18003BAE1C /* Lora-Regular.ttf */; };
+		195E742328D4BD25003BAE1C /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742228D4BD25003BAE1C /* Lora-Medium.ttf */; };
+		195E742528D4BD30003BAE1C /* Lora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742428D4BD30003BAE1C /* Lora-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		195E741428D4BB54003BAE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		195E741728D4BB54003BAE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		195E741928D4BB54003BAE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195E742028D4BD18003BAE1C /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
+		195E742228D4BD25003BAE1C /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
+		195E742428D4BD30003BAE1C /* Lora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		195E740A28D4BB50003BAE1C /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				195E741F28D4BBD0003BAE1C /* Fonts */,
 				195E740B28D4BB50003BAE1C /* AppDelegate.swift */,
 				195E740D28D4BB50003BAE1C /* SceneDelegate.swift */,
 				195E740F28D4BB50003BAE1C /* ViewController.swift */,
@@ -65,6 +72,16 @@
 				195E741928D4BB54003BAE1C /* Info.plist */,
 			);
 			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		195E741F28D4BBD0003BAE1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				195E742028D4BD18003BAE1C /* Lora-Regular.ttf */,
+				195E742228D4BD25003BAE1C /* Lora-Medium.ttf */,
+				195E742428D4BD30003BAE1C /* Lora-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195E742328D4BD25003BAE1C /* Lora-Medium.ttf in Resources */,
+				195E742528D4BD30003BAE1C /* Lora-SemiBold.ttf in Resources */,
 				195E741828D4BB54003BAE1C /* LaunchScreen.storyboard in Resources */,
+				195E742128D4BD18003BAE1C /* Lora-Regular.ttf in Resources */,
 				195E741528D4BB54003BAE1C /* Assets.xcassets in Resources */,
 				195E741328D4BB50003BAE1C /* Main.storyboard in Resources */,
 			);
@@ -297,6 +317,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +327,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
