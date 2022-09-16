@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		195E740C28D4BB50003BAE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E740B28D4BB50003BAE1C /* AppDelegate.swift */; };
 		195E740E28D4BB50003BAE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E740D28D4BB50003BAE1C /* SceneDelegate.swift */; };
-		195E741028D4BB50003BAE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E740F28D4BB50003BAE1C /* ViewController.swift */; };
+		195E741028D4BB50003BAE1C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E740F28D4BB50003BAE1C /* HomePageViewController.swift */; };
 		195E741328D4BB50003BAE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195E741128D4BB50003BAE1C /* Main.storyboard */; };
 		195E741528D4BB54003BAE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195E741428D4BB54003BAE1C /* Assets.xcassets */; };
 		195E741828D4BB54003BAE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195E741628D4BB54003BAE1C /* LaunchScreen.storyboard */; };
 		195E742128D4BD18003BAE1C /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742028D4BD18003BAE1C /* Lora-Regular.ttf */; };
 		195E742328D4BD25003BAE1C /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742228D4BD25003BAE1C /* Lora-Medium.ttf */; };
 		195E742528D4BD30003BAE1C /* Lora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 195E742428D4BD30003BAE1C /* Lora-SemiBold.ttf */; };
+		195E742728D4C841003BAE1C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E742628D4C841003BAE1C /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		195E740828D4BB50003BAE1C /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195E740B28D4BB50003BAE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195E740D28D4BB50003BAE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		195E740F28D4BB50003BAE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		195E740F28D4BB50003BAE1C /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		195E741228D4BB50003BAE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		195E741428D4BB54003BAE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		195E741728D4BB54003BAE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		195E742028D4BD18003BAE1C /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		195E742228D4BD25003BAE1C /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
 		195E742428D4BD30003BAE1C /* Lora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-SemiBold.ttf"; sourceTree = "<group>"; };
+		195E742628D4C841003BAE1C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +67,12 @@
 				195E741F28D4BBD0003BAE1C /* Fonts */,
 				195E740B28D4BB50003BAE1C /* AppDelegate.swift */,
 				195E740D28D4BB50003BAE1C /* SceneDelegate.swift */,
-				195E740F28D4BB50003BAE1C /* ViewController.swift */,
+				195E740F28D4BB50003BAE1C /* HomePageViewController.swift */,
 				195E741128D4BB50003BAE1C /* Main.storyboard */,
 				195E741428D4BB54003BAE1C /* Assets.xcassets */,
 				195E741628D4BB54003BAE1C /* LaunchScreen.storyboard */,
 				195E741928D4BB54003BAE1C /* Info.plist */,
+				195E742628D4C841003BAE1C /* Extension.swift */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -158,9 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				195E741028D4BB50003BAE1C /* ViewController.swift in Sources */,
+				195E741028D4BB50003BAE1C /* HomePageViewController.swift in Sources */,
 				195E740C28D4BB50003BAE1C /* AppDelegate.swift in Sources */,
 				195E740E28D4BB50003BAE1C /* SceneDelegate.swift in Sources */,
+				195E742728D4C841003BAE1C /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
