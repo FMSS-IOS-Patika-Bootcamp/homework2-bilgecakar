@@ -16,7 +16,7 @@ extension UINavigationBar {
     func customNavigationBar() {
         
         self.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "Lora", size: 20)!,
+            NSAttributedString.Key.font: UIFont(name: "Lora-Semibold", size: 20)!,
             NSAttributedString.Key.foregroundColor:UIColor(named: "WhiteTextColor")!
         ]
         

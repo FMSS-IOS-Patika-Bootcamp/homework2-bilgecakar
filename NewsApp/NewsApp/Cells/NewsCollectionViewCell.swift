@@ -15,7 +15,12 @@ class NewsCollectionViewCell: UICollectionViewCell {
             cellBackgroundView.layer.cornerRadius = 15
         }
     }
-    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsImageView: UIImageView! {
+        didSet {
+            newsImageView.layer.cornerRadius = 15
+            newsImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+    }
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var newsTitleLabel: UILabel!
     
