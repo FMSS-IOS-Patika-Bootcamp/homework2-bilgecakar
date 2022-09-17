@@ -59,7 +59,14 @@ extension HomePageViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCellIdentifier, for: indexPath) as! NewsCollectionViewCell
         cell.newsTitleLabel.text = newsData[indexPath.row].newsTitle
         cell.categoryNameLabel.text = newsData[indexPath.row].newsCategory
+        cell.configureUI(newsData[indexPath.row].newsImage)
         return cell
     }
 }
 
+//Configure news collectionview
+extension NewsCollectionViewCell {
+    func configureUI(_ imageName: String) {
+        newsImageView.image = UIImage(named: imageName)
+    }
+}
