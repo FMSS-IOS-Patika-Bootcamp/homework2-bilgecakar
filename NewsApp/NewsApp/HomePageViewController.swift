@@ -9,12 +9,57 @@ import UIKit
 
 class HomePageViewController: UIViewController {
 
+    @IBOutlet weak var newsCollectionView: UICollectionView!
+    private let newsCellIdentifier =  "NewsCollectionViewCell"
+
+    //News data array, 
+    let newsData = News.dummyData
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Customize navigation title
+        //Customize navigation title with extension on UINavigationBar
         self.navigationController?.navigationBar.customNavigationBar()
         
+        registerCell()
+        
+        //Delegations
+        newsCollectionView.delegate = self
+        newsCollectionView.dataSource = self
+        
+        //Customize collectionview 
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.size.width
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 25)
+        layout.itemSize = CGSize(width: (screenWidth - 65 )/2, height: screenWidth*0.5)
+        layout.minimumInteritemSpacing = 15
+        layout.minimumLineSpacing = 24
+        newsCollectionView.collectionViewLayout = layout
     }
-
+    
+    //Register cell
+    private func registerCell() {
+        newsCollectionView.register(UINib(nibName: newsCellIdentifier, bundle: nil), forCellWithReuseIdentifier: newsCellIdentifier)
+    }
 }
+
+extension HomePageViewController: UICollectionViewDelegate {
+    
+}
+
+extension HomePageViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return newsData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCellIdentifier, for: indexPath) as! NewsCollectionViewCell
+        cell.newsTitleLabel.text = newsData[indexPath.row].newsTitle
+        cell.categoryNameLabel.text = newsData[indexPath.row].newsCategory
+        return cell
+    }
+}
+
