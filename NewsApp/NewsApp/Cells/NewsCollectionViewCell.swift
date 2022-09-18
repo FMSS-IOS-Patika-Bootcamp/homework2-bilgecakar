@@ -9,7 +9,6 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var cellBackgroundView: UIView! {
         didSet {
             cellBackgroundView.layer.cornerRadius = 15
@@ -23,7 +22,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
     }
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var newsTitleLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
