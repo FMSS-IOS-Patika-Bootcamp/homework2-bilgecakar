@@ -13,6 +13,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView! {
         didSet {
             backgroundView.layer.cornerRadius = 30
+            backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         }
     }
     @IBOutlet weak var newsImageView: UIImageView! {
@@ -29,7 +30,11 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var categoryNameLabel: UILabel!              //Represent news category name
     @IBOutlet weak var writerNameLabel: UILabel!                //Represent news writer name
     @IBOutlet weak var newsDateLabel: UILabel!                  //Represent date when publish news
-    @IBOutlet weak var newsDescriptionLabel: UILabel!           //Represent news  description
+    @IBOutlet weak var newsDescriptionLabel: UILabel! {         //Represent news  description
+        didSet {
+            newsDescriptionLabel.textAlignment = .justified
+        }
+    }
     
     var incomingData: News?    //Represent incoming data from Hompepage
     

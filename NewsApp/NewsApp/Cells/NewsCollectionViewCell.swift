@@ -9,7 +9,6 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var cellBackgroundView: UIView! {
         didSet {
             cellBackgroundView.layer.cornerRadius = 15

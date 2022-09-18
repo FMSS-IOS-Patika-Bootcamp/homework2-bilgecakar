@@ -11,7 +11,6 @@ class HomePageViewController: UIViewController {
 
     @IBOutlet weak var newsCollectionView: UICollectionView!
     private let newsCellIdentifier =  "NewsCollectionViewCell"
-
     let newsData = News.dummyData                //News data array,
     var onPassData: ((_ data: News) -> ())?      //Clouser for pass struct other viewcontroller
     

@@ -83,7 +83,5 @@ extension News {
                 newsDate: "September 17, 2022 ",
                 newsWriter: "M. Moon, Endgadget"
             ),
-  
-    
     ]
 }

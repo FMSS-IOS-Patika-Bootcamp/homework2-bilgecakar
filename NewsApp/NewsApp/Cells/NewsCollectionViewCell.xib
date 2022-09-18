@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,12 +25,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-1X-A8J">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="rectangle.portrait.and.arrow.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-8H-1JK">
-                                <rect key="frame" x="0.0" y="2" width="150" height="106"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-8H-1JK">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="iIY-4v-ABQ"/>
                                 </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rx-mD-SDz">
                                 <rect key="frame" x="10" y="120" width="130" height="15.5"/>
@@ -46,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="WhiteTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uY9-8H-1JK" secondAttribute="trailing" id="4Wj-U6-vx3"/>
                             <constraint firstAttribute="trailing" secondItem="2rx-mD-SDz" secondAttribute="trailing" constant="10" id="4m8-md-lvs"/>
@@ -80,15 +78,14 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <namedColor name="PrimaryTextColor">
             <color red="0.0080000003799796104" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondTextColor">
-            <color red="0.74099999666213989" green="0.72500002384185791" blue="0.72500002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.61960784313725492" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="WhiteTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
