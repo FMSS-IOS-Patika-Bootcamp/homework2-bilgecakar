@@ -12,7 +12,7 @@ extension News {
     static let dummyData : [News] = [
         .init(
             newsTitle: "Stocks fall after FedEx warns of global recession",
-            newsDescription: "US stocks fell on Friday after FedEx served investors a brutal pre-earnings announcement about the state of the global economy.The Dow closed down 140 points, or 0.5%, lower. The S&P 500 fell 0.7% and the Nasdaq Composite was down 0.9%.All three major indexes logged their fourth losing week out of the last five. The Dow dropped 4.1% for the week, and the S&P 500 and Nasdaq dropped 5% and 5.5%, respectively.Shares of FedEx were down nearly 22% after the company withdrew its full-year guidance late Thursday and warned that a slowing economy will cause it to fall $500 million short of its revenue target. The weakening global economy, particularly in Asia and Europe has hurt FedEx (FDX) (FDX)'s express delivery business. The company said demand for packages weakened considerably in the final weeks of the quarter.",
+            newsDescription: "US stocks fell on Friday after FedEx served investors a brutal pre-earnings announcement about the state of the global economy.The Dow closed down 140 points, or 0.5%, lower. The S&P 500 fell 0.7% and the Nasdaq Composite was down 0.9%.All three major indexes logged their fourth losing week out of the last five. The Dow dropped 4.1% for the week, and the S&P 500 and Nasdaq dropped 5% and 5.5%, respectively...",
             newsImage: "NewsOne",
             newsUrl: "https://edition.cnn.com/2022/09/16/investing/dow-stock-market-today/index.html",
             newsCategory: "Business",

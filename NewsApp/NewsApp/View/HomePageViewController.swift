@@ -15,6 +15,8 @@ class HomePageViewController: UIViewController {
     //News data array, 
     let newsData = News.dummyData
     
+    var onPassData: ((_ data: News) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +47,13 @@ class HomePageViewController: UIViewController {
 }
 
 extension HomePageViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newsDetailViewController = storyboard.instantiateViewController(withIdentifier: "newsDetailPage") as! NewsDetailViewController
+        //Send News struct data
+        newsDetailViewController.incomingData = newsData[indexPath.row]
+        self.navigationController?.pushViewController(newsDetailViewController, animated: true)
+    }
 }
 
 extension HomePageViewController: UICollectionViewDataSource {

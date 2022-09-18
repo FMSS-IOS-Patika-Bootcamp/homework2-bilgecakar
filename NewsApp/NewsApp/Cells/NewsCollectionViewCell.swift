@@ -23,7 +23,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
     }
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var newsTitleLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
