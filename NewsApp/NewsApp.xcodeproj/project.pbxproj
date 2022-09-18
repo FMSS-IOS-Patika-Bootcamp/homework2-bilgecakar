@@ -22,6 +22,7 @@
 		19A81B3528D5A49C00B7CD1C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A81B3428D5A49C00B7CD1C /* News.swift */; };
 		19A81B3928D6067E00B7CD1C /* News Dummy Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A81B3828D6067E00B7CD1C /* News Dummy Data.swift */; };
 		19A81B3B28D6849200B7CD1C /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A81B3A28D6849200B7CD1C /* NewsDetailViewController.swift */; };
+		19D254F328D6FAA20065A481 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D254F228D6FAA10065A481 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		19A81B3428D5A49C00B7CD1C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		19A81B3828D6067E00B7CD1C /* News Dummy Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News Dummy Data.swift"; sourceTree = "<group>"; };
 		19A81B3A28D6849200B7CD1C /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		19D254F228D6FAA10065A481 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				195E740F28D4BB50003BAE1C /* HomePageViewController.swift */,
 				19A81B3A28D6849200B7CD1C /* NewsDetailViewController.swift */,
+				19D254F228D6FAA10065A481 /* WebViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A81B3B28D6849200B7CD1C /* NewsDetailViewController.swift in Sources */,
+				19D254F328D6FAA20065A481 /* WebViewController.swift in Sources */,
 				19A81B3528D5A49C00B7CD1C /* News.swift in Sources */,
 				195E741028D4BB50003BAE1C /* HomePageViewController.swift in Sources */,
 				195E740C28D4BB50003BAE1C /* AppDelegate.swift in Sources */,
@@ -373,7 +377,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +406,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

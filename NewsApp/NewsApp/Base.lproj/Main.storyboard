@@ -164,7 +164,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="pPJ-fw-iwI" customClass="NewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCells" id="pPJ-fw-iwI" customClass="NewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SXx-xK-Zgm">
@@ -195,10 +195,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="zJE-XG-LFK">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify.leading" catalog="system" style="plain" id="yAg-b5-6tm">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify.leading" catalog="system" id="yAg-b5-6tm">
                             <color key="tintColor" name="WhiteTextColor"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell.fill" catalog="system" style="plain" id="jOM-ui-JsH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell.fill" catalog="system" id="jOM-ui-JsH">
                             <color key="tintColor" name="WhiteTextColor"/>
                         </barButtonItem>
                     </navigationItem>
@@ -219,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzk-Bs-7k9">
-                                <rect key="frame" x="0.0" y="84" width="414" height="822"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-Jz-B9p">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -263,21 +263,24 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-G8-kFB">
-                                        <rect key="frame" x="20" y="358" width="374" height="374"/>
+                                        <rect key="frame" x="20" y="358" width="374" height="364"/>
                                         <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="16"/>
                                         <color key="textColor" name="PrimaryTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-td-KRF">
-                                        <rect key="frame" x="313" y="752" width="81" height="20"/>
+                                        <rect key="frame" x="323" y="742" width="71" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="xtj-V3-W03"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Read More...">
+                                        <state key="normal" title="Read More">
                                             <color key="titleColor" name="BackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="readMorePressed:" destination="B0L-7f-67r" eventType="touchUpInside" id="GVb-22-aX5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -292,6 +295,7 @@
                                     <constraint firstItem="lqP-Jz-B9p" firstAttribute="top" secondItem="Wzk-Bs-7k9" secondAttribute="top" id="QFE-AE-cEr"/>
                                     <constraint firstAttribute="trailing" secondItem="YSq-3W-quD" secondAttribute="trailing" constant="20" id="SSx-s2-CA7"/>
                                     <constraint firstItem="Fi7-G8-kFB" firstAttribute="leading" secondItem="Wzk-Bs-7k9" secondAttribute="leading" constant="20" id="aql-Ph-zJ6"/>
+                                    <constraint firstItem="wNw-td-KRF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wzk-Bs-7k9" secondAttribute="leading" constant="20" symbolic="YES" id="azq-Qa-F6j"/>
                                     <constraint firstItem="AqJ-Ya-5KQ" firstAttribute="leading" secondItem="Wzk-Bs-7k9" secondAttribute="leading" constant="20" id="dwg-3N-kUs"/>
                                     <constraint firstItem="Fi7-G8-kFB" firstAttribute="top" secondItem="AqJ-Ya-5KQ" secondAttribute="bottom" constant="20" id="nG0-mj-tp7"/>
                                     <constraint firstAttribute="trailing" secondItem="lqP-Jz-B9p" secondAttribute="trailing" id="o2L-ll-PvX"/>
@@ -303,7 +307,7 @@
                         <viewLayoutGuide key="safeArea" id="AX6-xu-8l4"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Wzk-Bs-7k9" secondAttribute="bottom" constant="-10" id="ALX-ge-PVd"/>
+                            <constraint firstAttribute="bottom" secondItem="Wzk-Bs-7k9" secondAttribute="bottom" id="ALX-ge-PVd"/>
                             <constraint firstItem="Wzk-Bs-7k9" firstAttribute="trailing" secondItem="AX6-xu-8l4" secondAttribute="trailing" id="Lky-Gv-oZQ"/>
                             <constraint firstItem="Wzk-Bs-7k9" firstAttribute="leading" secondItem="AX6-xu-8l4" secondAttribute="leading" id="RCa-xt-ed0"/>
                             <constraint firstItem="Wzk-Bs-7k9" firstAttribute="top" secondItem="AX6-xu-8l4" secondAttribute="top" constant="40" id="v5r-9R-XWV"/>
@@ -322,6 +326,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSa-4N-MuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1434.7826086956522" y="93.75"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9BV-et-dRU">
+            <objects>
+                <viewController storyboardIdentifier="webPageViewController" id="MWd-Je-skC" customClass="WebViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="28l-O2-BVF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPt-jv-iAA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JwC-Nc-kDp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OPt-jv-iAA" firstAttribute="top" secondItem="JwC-Nc-kDp" secondAttribute="top" id="Ikk-NT-u9k"/>
+                            <constraint firstItem="JwC-Nc-kDp" firstAttribute="trailing" secondItem="OPt-jv-iAA" secondAttribute="trailing" id="YDa-Po-kHc"/>
+                            <constraint firstItem="OPt-jv-iAA" firstAttribute="leading" secondItem="JwC-Nc-kDp" secondAttribute="leading" id="mml-0S-rMI"/>
+                            <constraint firstItem="JwC-Nc-kDp" firstAttribute="bottom" secondItem="OPt-jv-iAA" secondAttribute="bottom" id="n0r-2Y-31M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="OPt-jv-iAA" id="AAV-0l-Qrp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xe-3K-gGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8HU-AA-Vh4">

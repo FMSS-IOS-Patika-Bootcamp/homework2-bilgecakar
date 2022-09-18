@@ -26,12 +26,12 @@ class NewsDetailViewController: UIViewController {
             writerImageview.layer.cornerRadius = writerImageview.layer.frame.size.width / 2
         }
     }
-    @IBOutlet weak var categoryNameLabel: UILabel!
-    @IBOutlet weak var writerNameLabel: UILabel!
-    @IBOutlet weak var newsDateLabel: UILabel!
-    @IBOutlet weak var newsDescriptionLabel: UILabel!
+    @IBOutlet weak var categoryNameLabel: UILabel!              //Represent news category name
+    @IBOutlet weak var writerNameLabel: UILabel!                //Represent news writer name
+    @IBOutlet weak var newsDateLabel: UILabel!                  //Represent date when publish news
+    @IBOutlet weak var newsDescriptionLabel: UILabel!           //Represent news  description
     
-    var incomingData: News?
+    var incomingData: News?    //Represent incoming data from Hompepage
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,4 +53,13 @@ class NewsDetailViewController: UIViewController {
         self.newsDescriptionLabel.text = incomingData?.newsDescription
     }
     
+    @IBAction func readMorePressed(_ sender: Any) {
+        
+        //Oepn webview
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let webViewCotroller = storyboard.instantiateViewController(withIdentifier: "webPageViewController") as! WebViewController
+        //Send new url to WebviewContoller
+        webViewCotroller.newsUl = incomingData?.newsUrl
+        present(webViewCotroller, animated: true, completion: nil)
+    }
 }

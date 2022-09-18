@@ -12,10 +12,8 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var newsCollectionView: UICollectionView!
     private let newsCellIdentifier =  "NewsCollectionViewCell"
 
-    //News data array, 
-    let newsData = News.dummyData
-    
-    var onPassData: ((_ data: News) -> ())?
+    let newsData = News.dummyData                //News data array,
+    var onPassData: ((_ data: News) -> ())?      //Clouser for pass struct other viewcontroller
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +46,8 @@ class HomePageViewController: UIViewController {
 
 extension HomePageViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Open news detail page
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newsDetailViewController = storyboard.instantiateViewController(withIdentifier: "newsDetailPage") as! NewsDetailViewController
         //Send News struct data
