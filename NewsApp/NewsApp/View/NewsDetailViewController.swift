@@ -8,7 +8,7 @@
 import UIKit
 
 class NewsDetailViewController: UIViewController {
-
+    
     
     @IBOutlet weak var backgroundView: UIView! {
         didSet {
@@ -35,11 +35,22 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //For back button in navigation bar
+        let label = UILabel(frame: CGRect(x:0, y:0, width:400, height:50))
+        label.backgroundColor = .clear
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.font = UIFont(name: "Lora", size: 16)
+        label.textColor = .white
+        label.text = incomingData?.newsTitle
+        self.navigationItem.titleView = label
+        
         self.newsImageView.image = UIImage(named: incomingData!.newsImage)
         self.writerNameLabel.text = "by  \(incomingData!.newsWriter)"
         self.categoryNameLabel.text = incomingData?.newsCategory
         self.newsDateLabel.text = incomingData?.newsDate
         self.newsDescriptionLabel.text = incomingData?.newsDescription
     }
-
+    
 }

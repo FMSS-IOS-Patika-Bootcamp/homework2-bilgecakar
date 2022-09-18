@@ -194,7 +194,7 @@
                             <constraint firstItem="79h-Vt-E9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vL9-Ub-nEQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zJE-XG-LFK">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="zJE-XG-LFK">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify.leading" catalog="system" style="plain" id="yAg-b5-6tm">
                             <color key="tintColor" name="WhiteTextColor"/>
                         </barButtonItem>
@@ -333,6 +333,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="WhiteTextColor"/>
                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="13"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
